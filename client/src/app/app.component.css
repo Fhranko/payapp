@@ -1,0 +1,16 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-icon-menu{
+  border: none
+}
+
+.example-container {
+  height: 100%;
+}
+
+.sidenav-content {
+  padding: 2rem;
+}
+

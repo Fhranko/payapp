@@ -1,0 +1,34 @@
+<!-- Menu -->
+<mat-toolbar>
+  <button (click)="drawer.toggle()" mat-icon-button class="mat-icon-menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>PayApp</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<!-- Sidebar -->
+
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side">
+    <ul>
+      <li>Elemento uno</li>
+      <li>Elemento dos</li>
+      <li>Elemento tres</li>
+    </ul>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illum
+      accusantium asperiores corporis! Eligendi provident iste labore tenetur,
+      iusto accusamus fugiat possimus consequuntur quibusdam, tempore
+      exercitationem quos voluptatum facilis? Tenetur!
+    </p>
+    <app-main></app-main>
+  </div>
+</mat-drawer-container>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
