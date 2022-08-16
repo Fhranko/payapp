@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . . ."
+    ". main main ."
+    ". main main ."
+    ". . . .";
+}
+
+.container-main {
+  grid-area: main;
+}
+.container-item {
+  width: 5rem;
+  height: 5rem;
+}

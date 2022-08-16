@@ -4,6 +4,9 @@ const User = require('../models/User');
 
 const jwt = require('jsonwebtoken');
 
+const userController = require('../controllers/user.controller');
+const expenseController = require('../controllers/expense.controller');
+
 router.get('/', (req, res) => {
 	res.send('hello world');
 });
@@ -34,15 +37,13 @@ router.post('/signin', async (req, res) => {
 	res.send({ token });
 });
 
+router.post('/user', userController.create);
+router.get('/user/:email', userController.find);
+router.get('/users', userController.all);
+
 // expenses
 
-router.get('/expenses', verifyToken, (req, res) => {
-	res.send('expenses');
-});
-
-router.post('/expense/create', verifyToken, (req, res) => {
-	res.send('create expense');
-});
+router.post('/expense', expenseController.create);
 
 // middlewares
 function verifyToken(req, res, next) {
